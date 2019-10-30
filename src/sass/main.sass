@@ -1,0 +1,1416 @@
+@import fonts.sass
+@import _normalize.css
+@import _mixins.sass
+
+body
+    font-family: 'montMedium', sans-serif
+body * 
+    font-family: 'montMedium', sans-serif
+    line-height: 1.7rem
+        
+li
+    list-style-type: none
+a
+    color: #4c5175
+a:hover
+    text-decoration: none
+    color: #4c5175
+.header
+    background: #fcfcfc url(../img/main-bg.png)
+    background-size: cover
+    background-repeat: no-repeat
+
+    width: 100%
+.contacts
+    display: flex
+    justify-content: center
+    align-self: center
+    align-item: center
+    @include bp-lg
+        justify-content: flex-end
+    @include bp-md
+        justify-content: center
+    @include bp-min
+        display: block
+.logo
+    cursor: pointer
+    @include bp-sm
+        display: flex
+        justify-content: center
+.contacts__email
+    display: flex
+    align-item: center
+    margin-left: 2px
+    font-weight: 500
+    font-size: 14px
+    @include bp-min
+        justify-content: center
+.contacts__email *
+    align-self: center
+    margin-left: 1px
+
+.contacts__phones
+    @extend .contacts__email
+
+.contacts__email::before
+    content: url('../img/mail-ico.png')
+    margin-top: 5px
+    margin-left: 2px
+    margin-right: 5px
+.contacts__phones::before
+    content: url('../img/phone-ico.png')
+    margin-top: 5px
+    margin-left: 2px
+    margin-right: 5px
+.num2
+    margin-left: 15px
+    @include bp-min
+        margin-left: 5px
+.future_nav ul
+    margin: 0
+    width: 100%
+    display: flex
+    justify-content: space-around
+    text-transform: uppercase
+    font-size: 18px
+    color: #ff2a0f
+    @include bp-lg
+        justify-content: center
+        margin-top: 30px
+    @include bp-min
+        font-size: 16px
+.future_nav a
+    font-family: montSemiBold
+    color: #ff2a0f
+    padding: 7px
+    &:hover
+        color: #fff
+        background: #0f1c48
+        border-radius: 15px
+        transition: ease 0.7s 
+.main-nav nav ul
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+    text-transform: uppercase
+    color: #25224d
+    @include bp-md
+        display: block
+        text-align: center
+
+
+.main-nav nav ul a
+    font-family: "montSemiBold"
+    &:hover
+       color: #192aaa
+.capture
+    margin-top: 75px
+.h1
+    font-family: "montBlack"
+    color: #192aaa
+    font-size: 36px
+    margin-bottom: 10px
+    @include bp-sm
+        text-align: center
+    @include bp-min
+        font-size: 30px
+.h2
+    font-family: "montBlack"
+    color: #25224d
+    font-size: 36px
+    @include bp-sm
+        text-align: center
+    @include bp-min
+        font-size: 30px
+.capture p
+    margin: 30px 0px
+    line-height: 2rem 
+    font-size: 18px
+    @include bp-sm
+        text-align: center
+.capture_btn
+    width: 265px
+    height: 55px
+    border: none
+    border-radius: 10px
+    color: #fff
+    background: #192aaa
+    font-family: "extraBold"
+    font-size: 20px
+    outline: none !important
+    margin-bottom: 100px
+    @include bp-sm
+        display: block
+        margin: 40px auto
+.btn-geo
+    height: 200px
+    width: 100%
+    background: #eee url(../img/btn-bg.png)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: 100%
+    border-radius: 10px
+    margin-bottom: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #192aaa 
+    font-size: 20px
+    font-family:  "extraBold"
+    cursor: pointer
+.btn-schedule
+    @extend .btn-geo
+    background: #eee url(../img/schedule-bg.png)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: 100%
+.btn-tariff
+    @extend .btn-geo
+    background: #eee url(../img/tariff-bg.png)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: 100%
+    margin-bottom: 100px
+
+// Section "Services"
+.services
+    background: #f3f3f3
+.shadow_services
+    margin-top: 58px
+    position: absolute
+    font-size: 48px
+    color: #ececec
+    z-index: 0
+    font-family: "montBlack"
+    @include bp-min
+        font-size: 35px
+
+.h3
+    position: relative
+    margin-top: 70px
+    z-index: 1
+    font-family: "extraBold"
+    color: #0b1243
+    font-size: 30px
+    margin-left: 32px
+
+.services_descr
+    margin-left: 10px
+    font-size: 18px
+    font-family: "montMedium"
+    color: #0b1243
+    margin-top: 20px
+    margin-bottom: 30px
+.services_advantage
+    position: relative
+    z-index: 2
+    background: #f0f0f0
+    width: 100%
+    border-radius: 10px
+    padding: 12px 30px
+    margin-bottom: 100px
+.services_advantage li
+    display: flex
+    margin-top: 15px
+    font-size: 18px
+    font-family: "montSemiBold"
+.services_advantage li:before
+    display: flex
+    content: url(../img/ok-ico.png)
+    margin-right: 20px
+    margin-top: 1px
+    width: 20px
+    height: 20px
+.services_temp-box
+    width: 265px
+    height: 130px
+    background: #e41405
+    display: flex
+    align-items: center
+    border-radius: 10px
+    margin-bottom: 26px
+    cursor: pointer
+    @include bp-min
+        margin: 20px auto
+
+.services_temp-box span
+    font-family: "montBold"
+    font-size: 36px
+    margin-left: 14px
+.services_temp-box p
+    font-size: 16px
+    margin-left: 14px
+    line-height: 1.15rem
+.services_temp-box .align-center
+    margin-left: 55px
+    text-align: center
+.services_temp-box_blue
+    background: #0095f6
+.service_mode
+    height: 205px
+    position: relative
+    margin-bottom: 50px
+    @include bp-min
+        height: 100%
+.service_mode:first-child
+    margin-top: 60px
+.service_mode h4
+    font-size: 17px
+    font-family: extraBold
+    align-items: center
+    display: flex
+    position: relative
+    z-index: 2 
+.service_mode p
+    font-size: 17px
+    letter-spacing: 0.09rem
+    line-height: 1.85rem
+    position: relative
+    z-index: 2
+    margin-top: 10px
+.service_mode span
+    font-size: 110px
+    position: absolute
+    font-family: "montBlack"
+    color: #eee
+    top: 50%
+    left: 50%
+    margin-left: -121px
+.mode-without:before
+    content: url(../img/thermometr-ico.png)
+    margin-right: 5px
+    width: 40px
+    height: 40px
+.mode-cold:before
+    content: url(../img/bottle-ico.png)
+    margin-right: 5px
+    width: 40px
+    height: 40px
+.mode-warm:before
+    content: url(../img/pills-ico.png)
+    margin-right: 5px
+    width: 40px
+    height: 40px
+.mode-freeze:before
+    content: url(../img/snow-flake.png)
+    margin-right: 5px
+    width: 40px
+    height: 40px
+// Section "Contacts"
+.contacts-section
+    background: url(../img/contacts-bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100%
+    @include bp-lg
+        height: 100%
+.shadow_contacts
+    @extend .shadow_services
+    margin-top: -10px
+.adress , .phones a , .mail a
+    color: #000 !important
+.adress , .phones  , .mail 
+    display: flex
+    align-self: center
+    align-items: center
+    margin-top: 40px
+    font-size: 18px
+    font-family: "montSemiBold"
+    padding-left: 20px
+.phones a 
+    display: block
+.contacts_feedback-box
+    margin-top: 57px
+.contacts-info i 
+    margin-right: 15px
+    margin-top: 10px
+.contacts_feedback
+    padding: 25px 35px
+    background: #0b1243
+    border-radius: 12px
+    font-size: 20px
+    font-family: extraBold
+.contacts-info .shadow_contacts
+    @include bp-sm
+        margin-left: 25px
+.contacts_feedback h3
+    color: white
+    text-align: center
+    font-size: 20px
+    font-family: extraBold
+    @include bp-sm
+        text-align: center
+.contacts_feedback input
+    width: 290px
+    display: block
+    margin: 0 auto
+    margin-top: 25px
+    height: 55px
+    padding-left: 30px
+    background: #c5c5c5
+    border: none 
+    outline: none
+    border-radius: 10px
+    @include bp-min
+        width: 240px
+.contacts_feedback input::placeholder
+    color: #000
+    font-family: extraBold
+.btn_submit
+    width: 290px
+    height: 55px
+    display: block
+    margin: 0 auto
+    border: none 
+    outline: none
+    border-radius: 10px
+    margin-top: 42px
+    padding-left: 0px
+    background: #d2200a
+    text-transform: uppercase
+    color: white
+    font-family: "extraBold"
+    @include bp-min
+        width: 240px
+.contacts_where
+    margin-top: 160px
+.contacts_map-wrapper
+    display: flex
+    justify-content: space-around
+    margin-top: 70px
+    margin-bottom: 40px
+    @include bp-md
+        display: block
+        width: 100%
+        margin: 0 auto
+        margin-top: 60px
+    @include bp-sm
+        width: 100%
+.contacts_map-module img
+    margin:  0 auto
+    width: 195px
+    height: 100%
+    @include bp-md
+        display: block
+        width: 100%
+        margin: 0 auto
+    @include bp-sm
+        width: 100%
+
+.contacts_where img
+    width: 100%
+    @include bp-lg
+        display: block
+        width: 100%
+        margin: 0 auto
+    @include bp-md
+        display: block
+        width: 100%
+        margin: 0 auto
+    @include bp-sm
+        width: 100%
+.contacts_map-module
+    @include bp-md
+        margin-top: 20px
+// Section "Contacts"
+.shadow_docs
+    @extend .shadow_services
+.docs_box
+    display: flex
+    justify-content: space-between
+    margin-top: 60px
+    margin-bottom: 60px
+    @include bp-sm
+        display: block
+        width: 200px
+        margin: 0 auto
+.docs_box img
+    height: 220px
+.docs_el a
+    display: flex
+    justify-content: center
+    margin: 0 auto
+    text-align: center
+    margin-top: 10px
+.docs_box , .docs_el img
+    @include bp-sm
+        display: block
+        width: 200px
+        margin: 0 auto
+        margin-top: 50px
+.docs_el a:before
+    content: url(../img/pdf-ico.png)
+    margin-right: 15px
+// Section "calculator"
+.calculator
+    background: #dadada
+.calculator-box
+    margin-top: 20px
+    padding: 20px
+    background: #f4f5ff
+    border-radius: 10px
+    margin-bottom: 75px
+.calculator .lefter
+    margin-left: 12px
+.calculator-h3
+    color: #192aaa
+    font-family: montBlack
+    font-size: 24px
+    text-align: center
+.from
+    display: block
+    position: relative
+.from span
+    display: block
+    font-size: 18px
+    font-family: "extraBold"
+    margin-top: 30px
+    margin-bottom: 20px
+    @include bp-sm
+        font-size: 16px
+// s
+.select select
+    border:  none
+    outline: none
+    appearance: none
+    padding: 8px
+    color: white
+    font-size: 20px
+    border-radius: 10px
+    background: #0b1243
+    padding-left: 23px
+    width: 192px
+    cursor: pointer
+    height: 46px
+    @include bp-sm
+        width: 150px
+    @include bp-min
+        width: 120px
+        padding-left: 10px
+        text-align: left
+.select:after
+    content: url(../img/arr-down-calc-new.png)
+    color: white
+    position: absolute
+    margin-left: -25px
+    margin-top: 2px
+    font-size: 30px
+    font-family: "extraBold"
+    pointer-events: none
+.in
+    @extend .from
+.in span
+    color: #d2200a
+.in select
+    background: #e9ebfd
+    border: 2px solid #0b1243
+    color: #000
+    box-sizing: border-box
+.in .select:after
+    color: #000
+.loc
+    display: flex
+    justify-content: space-around
+    margin-bottom: 40px
+.in:before
+    content: url(../img/btw-track.png)
+    position: absolute
+    margin-left: -49px
+    margin-top: 78px
+    @include bp-lg
+        display: none
+    @include bp-sm
+        margin-left: -43px
+    @include bp-min
+        display: none
+.loc:after
+    content: ' '
+    position: absolute
+    display: block
+    margin: 0 auto
+    width: 340px
+    // border-bottom: 2px solid #9ca4dd
+    border-top: 2px solid #9ca4dd
+    // border-radius: 2px
+    margin-top: 170px
+    @include bp-min
+        width: 250px
+    
+.expedition_title
+    padding-top: 35px
+    font-size: 20px
+    font-family: "extraBold"
+    text-align: center
+.expedition_wrap
+    display: flex
+    justify-content: space-around
+.expedition_wrap .in:before
+    content: ''
+.expedition_wrap .from span
+    margin-bottom: 0
+.expedition_wrap .in span
+    margin-bottom: 0
+.from_checkbox
+    appearance: none
+    width: 37px
+    height: 37px
+    border-radius: 50%
+    outline: none
+    cursor: pointer
+    display: block
+    border: 1px solid #000
+    margin: 20px auto
+    background: #fff
+
+.from .from_checkbox_mark
+    display: none
+    position: absolute
+    top: 0
+    margin-top: 78px
+    font-size: 40px
+    margin-left: 85px
+    font-family: "montMedium"
+    color: #0b1243
+    pointer-events: none
+    @include bp-sm
+        margin-left: 42%
+.from_checkbox:checked
+    background: #fff
+.from_checkbox:checked + .from_checkbox_mark
+    display: block
+.in .from_checkbox_mark
+    margin-left: 79px
+    @include bp-sm
+        margin-left: 42%
+.bulk 
+    display: flex
+    justify-content: space-around
+    margin-bottom: 50px
+.price:before
+    content: ' '
+    position: absolute
+    display: block
+    margin: 0 auto
+    width: 320px
+    border-bottom: 2px solid #9ca4dd
+    
+    border-radius: 2px
+    margin-top: 170px
+    @include bp-min
+        width: 250px
+        margin-left: 40px
+.bulk span
+    display: block 
+    text-align: center
+    margin-top: 20px
+    font-size: 18px
+    font-family: "montSemiBold"
+.bulk input 
+    width: 160px
+    border-radius: 10px
+    border: none
+    height: 42px
+    color: #fff
+    padding: 10px
+.bulk input:focus
+    color: #0b1243
+.weigt input
+    background: #0b1243
+    margin-top: 10px
+    appearance: none
+    @include bp-min
+        width: 120px
+    
+.weigt input::placeholder
+    color: white
+    font-size: 20px
+    font-family: "montSemiBold"
+    text-align: center
+    opacity: 1
+.weigt input:focus::placeholder
+    color: #0b1243
+.weigt input:focus
+    background: #e9ebfd
+    border: 2px solid #0b1243
+    padding-left: 10px
+.volume
+    @extend .weigt
+.expedition_wrap .from span:first-child , .expedition_wrap .in span:first-child 
+    @include bp-390
+        font-size: 11px
+//Restyling input type="number"
+
+input[type="number"] 
+  -moz-appearance: textfield
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+
+.volume span
+    color: #d2200a
+.price:before
+    content: ' '
+    position: absolute
+    display: block
+    margin: 0 auto
+    width: 340px
+    border-bottom: 2px solid #9ca4dd
+    // border-top: 1px solid #9ca4dd
+    border-radius: 2px
+    margin-top: 0px
+    @include bp-min
+        width: 250px
+.price
+    max-width: 340px
+    display: block
+    margin: 0 auto
+.price__title
+    margin-top: 20px
+    padding-top: 10px
+    @extend .in
+.price__title:before
+    content: ''
+.price__title span
+    text-align: center
+    margin-bottom: 10px
+.price__input
+    display: flex
+    justify-content: center
+.price__input 
+    @extend .volume
+    margin-bottom: 47px
+    
+.price__input input
+    border-radius: 10px
+    width: 150px
+    height: 42px
+    text-align: center
+    border: none
+    color: #fff
+.price__input input:focus
+    color: #0b1243
+.price:after
+    content: ' '
+    position: absolute
+    display: block
+    margin: 0 auto
+    width: 340px
+    border-bottom: 2px solid #9ca4dd
+    // border-top: 1px solid #9ca4dd
+    border-radius: 2px
+    margin-top: 0px
+    @include bp-min
+        width: 250px
+        
+.insurance__title
+    @extend .in
+.insurance__title:before
+    content: ''
+.another_mode
+    display: flex
+    justify-content: space-around
+.temp-value__title
+    @extend .from
+.temp-value__title span
+    @include bp-min
+        text-align: center
+.insurance__checkbox_input
+    border: 1px solid #000
+    border-radius: 50%
+    width: 37px
+    height: 37px
+    background: #fff
+    @include bp-min
+        width: 42px !important
+.insurance__checkbox .insurance__num-input
+    border: 2px solid #0b1243 !important
+    outline: none
+    background: #e9ebfd
+    color: #0b1243
+    @include bp-min
+        width: 120px !important
+.insurance__checkbox input::placeholder
+    color: #0b1243 !important
+
+.insurance__checkbox
+    @extend .from
+.insurance__checkbox .from_checkbox_mark_insurance
+    margin-left: 70px
+    margin-top: 0px
+    @include bp-sm
+        margin-left: 62px 
+    @include bp-min
+        margin-left: 52px 
+.insurance__checkbox
+    @extend .volume
+.insurance__checkbox input
+    background:  #fff
+    width: 37px
+    height: 37px
+
+.insurance__checkbox input:focus
+    background: #fff
+
+
+.insurance__checkbox input[type='number']
+    width: 150px
+    border-radius: 10px
+    text-align: center
+    border: none
+    display: block
+    margin: 0 auto
+    @include bp-min
+        width: 120px !important
+.insurance__checkbox input[type='number']:focus
+    background: #e9ebfd
+.insurance__checkbox input:focus
+    border: 1px solid #000
+.insurance__checkbox .insurance__checkbox_input
+    width: 37px  !important
+    height: 37px !important
+    display: block
+    margin: 20px auto
+    cursor: pointer
+    outline: none
+        
+.insurance__checkbox_input:checked + .from_checkbox_mark
+    display: block
+
+.temp-mode
+    @extend .select
+    @extend .in
+.temp-mode_select
+    @extend .select
+.temp-mode_select select
+    position: relative
+    background: #e9ebfd
+    border: 2px solid #0b1243
+    color: #000
+    box-sizing: border-box
+    width: 150px
+    display: block
+    margin: 0 auto
+    font-size: 16px
+    padding-left: 10px
+    @include bp-min
+        width: 120px
+        text-align: left
+        margin-top: 30px
+.temp-mode_select:after
+    color: #000
+    right: 50px
+    top: 50px
+    margin-top: 0
+    margin-right: 0
+    margin-left: 0
+    @include bp-sm
+        right: 40px
+    @include bp-min
+        z-index: 100
+        top: -7px
+        right: inherit
+        margin-left: 130px
+        margin-top: 68px
+    @include  bp-390
+        margin-left: 100px
+        margin-top: 95px
+.calculator-view
+    margin-top: 115px
+    padding: 45px 60px 60px 30px
+    background: #e1e3f4
+    border-radius: 10px
+    @include bp-sm
+        margin-bottom: 50px
+.calc-info  * 
+    font-size: 24px 
+    font-family: "extraBold"
+    margin-top: 10px
+.loc-view
+    color: #d2200a
+    font-family:  "montMedium"
+.calc-info  span
+    font-family: "montMedium"
+.price-view span
+    color: #192aaa
+    font-family: "montBold"
+.transit-view  span
+    color: #d2200a
+.calc-info 
+    padding-bottom: 80px
+.calc-info:after
+    content: ' '
+    position: absolute
+    display: block
+    margin: 0 auto
+    width: 340px
+    border-bottom: 4px solid #9ca4dd
+    border-top: 3px solid #9ca4dd
+    border-radius: 2px
+    margin-top: 40px
+    left: 35px
+    @include bp-min
+        width: 250px
+        margin: 50px auto
+.calc-pricing *
+    font-size: 24px
+    margin-top: 10px
+.calc-pricing span
+    font-family: "extraBold"
+.calc-pricing
+    margin-bottom: 80px
+.calc-pricing:after
+    content: ' '
+    position: absolute
+    display: block
+    margin: 0 auto
+    width: 340px
+    border-bottom: 4px solid #9ca4dd
+    border-top: 3px solid #9ca4dd
+    border-radius: 2px
+    margin-top: 40px
+    left: 35px
+    @include bp-min
+        width: 250px
+
+.total-view
+    font-size: 24px
+    margin-bottom: 20px
+.total-view span
+    font-family: "montBold"
+    color: #d2200a
+.calculator-view span
+    padding-left: 10px
+.calculator-box form *
+    @include bp-min
+        font-size: 14px
+        text-align: center
+.calculator-box form .select
+    @include bp-min
+        text-align: left !important
+// section "News"
+.news
+    background: url(../img/news-bg.jpg)
+    background-size: cover
+.news__item
+    display: flex
+    margin-top: 30px
+    width: 100%
+    background: #efefef
+    border-radius: 10px
+    padding-left: 70px
+    padding-top: 35px
+    @include bp-sm
+        padding-left: 0px
+        justify-content: center
+.news__content span
+    color: #0a1140
+    font-family: "extraBold"
+    font-size: 20px
+
+.news__content
+    @include bp-sm
+        width: 90%
+.news__content p
+    max-width: 600px
+    margin-top: 30px
+    color: #0a1140
+    font-size: 18px
+.news__content a
+    display: block
+    margin-top: 43px
+    margin-bottom: 35px
+    color: #d2200a
+    font-family: "montBold"
+.ctrl-block ul
+    display: flex
+    margin-top: 40px
+    margin-bottom: 50px
+.ctrl-block ul li:first-child
+    background: #0b1243
+    width: 45px
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+    color: #fff
+    display: flex
+    justify-content: center
+    cursor: pointer
+    font-size: 21px
+    font-family: "montBold"
+    align-items: center
+.ctrl-block ul li
+    height: 45px
+    width: 35px
+    background: #e1e3f4
+    display: flex
+    justify-content: center
+    cursor: pointer
+    align-items: center
+    font-size: 20px
+    font-family: "extraBold"
+.ctrl-block ul li:last-child
+    background: #0b1243
+    width: 45px
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+    color: #fff
+    display: flex
+    justify-content: center
+    cursor: pointer
+    font-size: 21px
+    font-family: "montBold"
+    align-items: center
+.ctrl-block_active
+    background: #efefef !important
+.news__hidden
+    position: absolute
+    width: 100%
+    z-index: 100
+    left: 0
+    right: 0
+    margin: auto
+.news__hidden
+    width: 100%
+    background: #f4f4f4
+.news-pop-up
+    position: absolute
+    background: #f4f4f4
+    z-index: 100
+//Footer
+.footer__nav 
+    @extend .main-nav
+    margin-top: -10px
+.footer__nav a
+    color: #000
+.footer
+    padding-top: 30px
+.footer__downline
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 25px
+    @include bp-md
+        display: block
+.footer__downline .contacts *
+    color: #000
+.rigths
+    font-size: 12px
+    display: block
+    margin: 0 auto
+    padding-top: 10px
+    padding-bottom: 10px
+    color: #444
+    text-align: center
+.footer__downline .future_nav ul
+    margin-top: 0px
+
+// Geo-delivery pop-up
+.btn-content
+    position: absolute
+    margin-top: 110px
+    z-index: 100
+    width: 73%
+    overflow: hidden
+    background: #f7f7f7
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0 
+    display: block
+    @include bp-lg
+        width: 90%
+.geo .h3
+    margin-top: 20px
+    font-size: 20px
+    font-family: "extraBold"
+    color: #d2200a
+    text-align: center
+.geo p
+    font-size: 18px
+    display: block
+    margin-left: auto
+    margin-right: auto
+    max-width: 810px
+    position: relative
+    z-index: 100
+    @include bp-sm
+        padding: 0 10px
+        text-align: center
+.geo p span
+    font-family: "montBold"
+    color: #d2200a
+.geo img
+    width: 90%
+    height: 90%
+    display: block
+    margin-left: auto
+    margin-right: auto
+    margin-top: -50px
+    @include bp-sm
+        margin-top: 40px
+.closePopUp
+    position: absolute
+    top: 0
+    right: 0
+    margin-right: 10px
+    font-size: 24px
+    font-family: "montBold"
+    cursor: pointer
+.geo
+    display: none
+    padding-bottom: 83px
+// Schedule pop-up
+.schedule
+    padding-bottom: 83px
+.schedule__header
+    max-width: 860px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 43px
+    @include bp-sm
+        text-align: center
+.schedule__header img
+    @include bp-md
+        margin-left: 30px
+    @include bp-min
+        display: none
+.schedule__title
+    font-size: 24px
+    font-family: "extraBold"
+    color: #0a1140
+    text-transform: uppercase
+#schedule__location
+    text-transform: initial
+    color: #d2200a
+    font-family: "extraBold"
+
+.carousel-item img
+    display: block
+    margin: auto
+    width: 80%
+.slide
+    display: block
+    margin: 0 auto
+.carousel
+    width: 80%
+    @include bp-sm
+        width: 95%
+.carousel-control-prev 
+    margin-left: -150px
+    @include bp-lg
+        margin-left: 0
+.carousel-control-next
+    margin-right: -150px
+    @include bp-lg
+        margin-right: 0
+.carousel-control-prev-icon
+    background: url(../img/left-arr.png)
+.carousel-control-next-icon, .carousel-control-prev-icon 
+    width: 40px
+    height: 40px
+    cursor: pointer
+.carousel-control-next-icon 
+    background: url(../img/right-arr.png)
+    cursor: pointer
+.schedule
+    display: none
+//Tariff pop-up
+.tariff .h3 , .tariff span
+    text-align: center
+    font-size: 18px
+    font-family: "extraBold"
+    text-transform: uppercase
+    color: #000
+    @include bp-sm
+        text-align: left
+.tariff
+    display: none
+.contact-feedback__first-screen
+    display: none
+    position: absolute
+    margin-top: 200px
+    width: 360px
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+    @include bp-lg
+        z-index: 100
+        top: 0
+        margin-left: auto
+        margin-right: auto
+        left: 0
+        right: 0
+        margin-top: 100px
+        width: 350px
+    @include bp-md
+        margin-top: 400px
+    @include bp-min
+        width: 300px
+        margin-left: auto
+        margin-right: auto
+        left: 0
+        right: 0
+.contacts_feedback .closePopUp
+    color: #fff
+.toCalcBtn img
+    width: 65px
+    height: 65px
+.toCalcBtn
+    position: fixed
+    top: 200px
+    right: 120px
+    z-index: 100
+    cursor: pointer
+    @include bp-lg
+        top: 20px
+        right: 20px
+.tariff__body
+    width: 80%
+    display: block
+    margin: 0 auto
+    @include bp-min
+        width: 95%
+.tariff__price-wrapper
+    display: flex
+    justify-content: space-around
+    padding-top: 42px
+    @include bp-md
+        display: block
+.tariff__left
+    width: 40%
+    margin-left: 50px
+    @include bp-lg
+        margin-left: 0px
+    @include bp-md
+        margin: 20px auto
+        width: 100%
+
+.tariff__right
+    width: 40% 
+    margin-right: 50px
+    @include bp-lg
+        margin-right: 0px
+    @include bp-md
+        margin: 50px auto
+        width: 100%
+.tarif__line
+    display: flex
+    justify-content: center
+    text-align: left
+    height: 60px
+    background: #fff
+    margin-top: 10px
+    align-items: center
+    border-radius: 10px
+.tarif__line:nth-child(even)
+    background: #0b1243
+.tarif__line:nth-child(even) span
+    color: #fff
+
+.tarif__line:first-child span
+    text-align: center
+.tarif__line span
+    display: block
+    padding-left: 0
+    margin-left: 0
+    text-align: left
+    font-size: 18px
+    width: 165px
+    @include bp-lg
+        text-align: center
+    @include bp-min
+        font-size: 16px
+.tarif__line span:nth-child(2)
+    text-align: right
+    @include bp-lg
+        text-align: center
+.tariff__info-wrapper
+    display: block
+    margin: 35px auto
+    width: 60%
+    background: #c5c5c5
+    padding: 25px 35px
+    border-radius: 10px
+    @include bp-md
+        width: 80%
+    @include bp-min
+        width: 95%
+.tariff__info
+    display: block
+    width: 100%
+    margin: 0 auto
+.tariff__info p
+    font-size: 18px
+    font-family: "extraBold"
+    color: #000
+    margin-top: 5px
+.tariff__info span
+    color: #dd2121
+    text-transform: initial
+.tariff__download
+    display: flex
+    align-items: center
+    font-family: "montRegular"
+.tariff__download img
+    margin-right: 10px
+    cursor: pointer
+.tariff__download-wrapper
+    width: 80%
+    display: block
+    margin: 0 auto
+.tariff__download p ,.tariff__download span
+    font-family: "montRegular"
+.tariff__download span
+    text-transform: inherit
+    color: #dd2121
+.tariff__download
+    margin-left: 80px
+    @include bp-sm
+        margin-left: 0px
+.tariff__controller-wrapper
+    margin-top: 50px
+    margin-bottom: 70px
+    position: relative
+.tariff__controller
+    max-width: 500px
+    padding-bottom: 40px
+.tariff__select-wrapper
+    position: relative
+.tariff__select-wrapper:after
+    display: block
+    position: absolute
+    content: url(../img/arr-down-calc-new.png)
+    color: #000
+    right: 0
+    top: 11px
+    margin-right: 20px
+    z-index: 1000
+    font-size: 18px
+    font-family: "extraBold"
+    pointer-events: none
+    @include bp-min
+        top: 30px
+.tariff__select-wrapper select
+    width: 195px
+    height: 50px
+    boder: none
+    border-radius: 10px
+    background: #c5c5c5
+    padding-left: 20px
+    appearance: none
+    font-size: 18px
+    font-family: "extraBold"
+    text-transform: uppercase
+    outline: none
+    cursor: pointer
+    @include bp-min
+        width: 100%
+        margin: 20px auto
+.tariff__select-box
+    display: flex
+    justify-content: space-around
+    @include bp-min
+        display: block
+.tariff__controller
+    background: #0b1243
+    border-radius: 10px
+    padding: 30px
+    display: block
+    margin: 0 auto
+.tariff__arr
+    display: block
+    color: #fff
+    margin-top: 5px
+    font-size: 40px
+    font-family: "montBold"
+    @include bp-min
+        display: none
+.tariff__controller .h4
+    font-size: 18px
+    font-family: "extraBold"
+    text-align: center
+    color: #fff
+    text-transform: uppercase
+    margin-bottom: 10px
+.tariff__submit-btn
+    margin-top: 30px    
+    margin-left:  auto
+    margin-right:  auto
+    justify-content: center
+    max-width: 400px
+    display: flex
+    align-items: center
+    text-align: center
+    font-size: 14px
+    font-family: "extraBold"
+    height: 41px
+    background: #d2200a
+    color: #fff
+    padding-left: 5px
+    padding-right: 5px
+    border-radius: 10px
+    cursor: pointer
+    @include bp-min
+        height: auto
+// News pop-up
+.news-pop-up
+    display: none
+    width: 100%
+    padding-bottom: 81px
+.news-pop-up .closePopUp
+    margin-top: 15px
+.news-pop-up__title
+    font-size: 20px
+    font-family: "extraBold"
+    text-align: center
+    margin-top: 70px
+    color: #0b1243
+    margin-bottom: 30px
+.news-pop-up__content
+    max-width: 680px
+.news-pop-up__content p
+    margin-top: 30px
+    font-size: 20px
+    color: #0b1243
+// Term pop-up
+.tempPopUp
+    display: flex
+    justify-content: space-between
+    max-width: 712px
+    background: #f8f8f8
+    left: 0
+    right: 0
+    z-index: 1000
+    border-radius: 10px
+    padding: 40px 15px 40px 20px
+
+.tempPopUp p 
+    font-size: 18px
+    font-family: "montBold"
+.tempPopUp div img
+    margin-right: 10px
+.tempPopUp
+    position: absolute
+    margin-left: 120px
+    z-index: 1000
+    @include bp-md
+        display: none
+.tempPopUp1
+    margin-top: 263px
+.tempPopUp2
+    margin-top: 412px
+.tempPopUp3
+    margin-top: 575px
+.tempPopUp4
+    margin-top: 720px
+.tempWrapper
+    position: relative
+    display: none
+    z-index: 1000
+    @include bp-md
+        display: none !important

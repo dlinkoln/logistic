@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="css/all.css" />
+
+    <title>Logistic company</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="top-line">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4 mx-md-auto col-12">
+              <div class="logo">
+                <img src="img/logo.png" alt="" />
+              </div>
+            </div>
+            <div class="col-xl-5 my-lg-auto col-lg-9 col-md-12 my-md-auto">
+              <div class="contacts">
+                <div class="contacts__email">
+                  <a href="mailto:info@tk-road.ru" class="email">
+                    info@tk-road.ru
+                  </a>
+                </div>
+                <div class="contacts__phones">
+                  <a href="tel:88002221813" class="num1">8 (800) 222-18-13</a>
+                  <a href="tel:84957443080" class="num2">8 (495) 744-30-80</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 my-lg-auto">
+              <nav class="future_nav">
+                <ul>
+                  <li><a href="" class="newsBtn" data-target="#news">Новости</a></li>
+                  <li><a href="">Личный кабинет</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-lg-auto">
+              <nav id="menu">
+                <ul>
+                  <li>
+                    <a href="#header">Главная</a>
+                  </li>
+                  <li><a href="#services">Услуги</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                  <li><a href="#docs">Документы</a></li>
+                  <li><a href="#calc">Калькулятор</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+
+        <div class="btn-content">
+            <div class="geo" id="geoPopUp">
+                <span class="closePopUp">×</span>
+                <h3 class="h3">География доставки</h3>
+                <p>
+                    На сегодняшний день компания «РегиОнАвтоДоставка» имеет <span>23 филиала.</span>   <br>
+                    География доставки более  <span>450 городов</span>
+                </p>
+                <img src="img/russia-map.png" alt="">
+            </div>
+            <div class="schedule" id="schedulePopUp">
+                <span class="closePopUp">×</span>
+                <div class="schedule__header">
+                    <img src="img/delivery-ico.png" alt="">
+                    <div class="schedule__title">
+                        Расписание движения рейсов: <span id="schedule__location">из Екатеринбург </span>
+                    </div>
+                </div>
+                <div class="schedule__body">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <span class="d-none town-name">из Москвы</span>
+                                <img src="img/schedule-msk.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <span class="d-none town-name">из Новосибирска</span>
+                                <img src="img/schedule-msk.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <span class="d-none town-name"> из Екатеринбурга</span>
+                                <img src="img/schedule-msk.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tariff" id="tariffPopUp">
+                <span class="closePopUp">×</span>
+                <h3 class="h3">Тариф на перевозку Сборного груза из <span>Москвы</span></h3>
+                <div class="tariff__body">
+                    <div class="tariff__price-wrapper">
+                        <div class="tariff__left">
+                            <div class="tarif__line">
+                                <span>Вес(кг)</span><span>Цена(руб)</span>
+                            </div>
+                            <div class="tarif__line">
+                                <span>от 0 до 2000 </span><span>37</span>
+                            </div>
+                            <div class="tarif__line">
+                                <span>от 2001 до 4000 </span><span>36</span>
+                            </div>
+                            <div class="tarif__line">
+                                <span>свыше 4001</span><span> 35</span>
+                            </div>
+                        </div>
+                        <div class="tariff__right">
+                            <div class="tarif__line">
+                                <span>ОБЪЕМ (М3) </span><span>Цена(руб)</span>
+                            </div>
+                            <div class="tarif__line">
+                                <span>  от 0 до  </span><span>108 140  </span>
+                            </div>
+                            <div class="tarif__line">
+                                <span> от 10 до 20  </span><span> 7 920   </span>
+                            </div>
+                            <div class="tarif__line">
+                                <span>свыше 20  </span><span>  7 700  </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff__info-wrapper">
+                    <div class="tariff__info">
+                        <p>Минимальная стоимость перевозки: <span>1500 руб.</span></p>
+                        <p>Срок доставки <span>12-13 суток.</span></p>
+                        <p>При плотности менее 220 кг в кубе, тариф рассчитывается за объем. </p>
+                        <p>Перевозка сборным вагоном в составе почтово-багажного поезда.</p>
+                    </div>
+                </div>
+                <div class="tariff__download-wrapper">
+                    <div class="tariff__download">
+                        <a download="tariff.xls"><img src="img/pdf-big.png" alt=""></a><p>Скачать  тариф на перевозку зборного груза <span>из Москвы</span></p>
+                    </div>
+                </div>
+                <div class="tariff__controller-wrapper">
+                    <div class="tariff__controller">
+                        <h4 class="h4">Выберите направления</h4>
+                        <div class="tariff__select-box">
+                            <div class="tariff__select-wrapper">
+                                <select name="" id="">
+                                    <option value="">Москва</option>
+                                    <option value="">Москва</option>
+                                    <option value="">Москва</option>
+                                </select>
+                            </div>
+                            <div class="tariff__arr"><img src="img/tariff-arr.png" alt=""></div>
+                            <div class="tariff__select-wrapper">
+                                <select name="" id="">
+                                    <option value="">Анапа</option>
+                                    <option value="">Анапа</option>
+                                    <option value="">Анапа</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tariff__submit-btn">
+                            Открыть тарифы по направлению Москва - Анапа
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-10">
+                <div class="toCalcBtn" data-target="#calc">
+                    <img src="img/toCalc-ico.png" alt="">
+                </div>
+              <div class="capture">
+                <h1 class="h1">Доставка груза по России</h1>
+                <h2 class="h2">с соблюдением температурного режима</h2>
+                <p>
+                  Выдерживаем сроки, обеспечиваем полную сохранность грузов,
+                  <br />
+                  предоставлять клиентам индивидуальные логистические решения.
+                </p>
+                <button class="capture_btn">
+                  Оставить заявку
+                </button>
+              </div>
+            </div>
+            <div class="contact-feedback__first-screen">
+                <div class="contacts_feedback">
+                    <span class="closePopUp">×</span>
+                    <h3 class="">
+                    Оставьте заявку <br />
+                    Вам перезвонят
+                    </h3>
+                    <form action="">
+                    <input type="name" placeholder="имя" />
+                    <input type="email" placeholder="email" />
+                    <input type="phone" placeholder="телефон" />
+                    <button type="submit" class="btn_submit">
+                        Оставить заявку
+                    </button>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-8 mx-md-auto mx-lg-0">
+              <div class="btn-geo" id="geo">География доставки <br />груза</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-8 mx-md-auto mx-lg-0">
+              <div class="btn-schedule" id="tariff-calc" >
+                Расписание движение <br />
+                рейсов
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-8 mx-md-auto mx-lg-0">
+              <div class="btn-tariff"  id="schedule">
+                Тарифы на перевозку: <br />
+                из Екатеринбурга<br />
+                из Новосибирска<br />
+                из Москвы<br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="services" id="services">
+    
+      <div class="container">
+      <div class="tempWrapper tempWrapper1">
+        <div class="tempPopUp tempPopUp1 ">
+            <div class="">
+                <img src="img/term-pop-img1.png" alt="">
+            </div>
+            <p>
+                Адресный збор груза у отправителя или прием груза на складе ООО «Регионавтодоставка»
+            </p>
+        </div>
+      </div>
+      <div class="tempWrapper tempWrapper2"> 
+        <div class="tempPopUp tempPopUp2 ">
+            <div class="">
+                <img src="img/term-pop-img2.png" alt="">
+            </div>
+            <p>
+                Взвешивание, обмер, маркировка, упаковка, размещение на складе (с соблюдением температурного режима)
+            </p>
+        </div>
+        </div>
+        <div class="tempWrapper tempWrapper3">
+            <div class="tempPopUp tempPopUp3 ">
+                <div class="">
+                    <img src="img/term-pop-img3.png" alt="">
+                </div>
+                <p>
+                    Загрузка в межгородской транспорт и транспортировка в пункт назначения на склад ООО «Регионавтодоставка»
+                </p>
+            </div>
+        </div>
+        <div class="tempWrapper tempWrapper4">
+            <div class="tempPopUp tempPopUp4 ">
+                <div class="">
+                    <img src="img/term-pop-img4.png" alt="">
+                </div>
+                <p>
+                    Выдача груза со склада ООО «Регионавтодоставка» получателю, либо доставка в адрес получателя, если заказана услуга «доставка до двери»
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-10">
+            <span class="shadow_services">Услуги</span>
+            <h3 class="h3">Услуги</h3>
+            <p class="services_descr">
+              Сотрудники компании имеют колоссальный опыт по перевозке
+              разнообразных грузов, который позволяет решать самые сложные
+              задачи по доставке, выдерживать сроки, обеспечивать полную
+              сохранность грузов, предоставлять клиентам <br />
+              индивидуальные логистические решения.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-8  offset-xl-1  offset-lg-0 col-lg-8">
+            <div class="services_advantage">
+              <ul>
+                <li>Склады хранения с поддержанием температурного режима;</li>
+                <li>Возврат документов с отметкой получателя;</li>
+                <li>Доставка груза строго по расписанию;</li>
+                <li>Отслеживание груза в режиме on-line.</li>
+                <li>Перевозка груза авто и ж/д транспортом;</li>
+                <li class="serv-li-spec">
+                  Перевозка груза с соблюдением <br />
+                  и подтверждением температурного режима
+                </li>
+                <li>(+2°С+8°С; +5°С+25°С; -18°С);</li>
+                <li>На рынке грузоперевозок с 2018 года;</li>
+                <li>Доставка по схеме «дверь-дверь»;</li>
+                <li>Погрузо-разгрузочные услуги;</li>
+                <li>Перевозки LTL, FT;</li>
+                <li>Страхование груза;</li>
+                <li>Упаковка груза;</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6 mx-auto ">
+            <div class="services_temp-box" id="temp-box-1">
+              <span class="temp-box_num">01</span>
+              <p>без температурного <br />режима</p>
+            </div>
+            <div class="services_temp-box services_temp-box_blue" id="temp-box-2">
+              <span class="temp-box_num">02</span>
+              <p class="align-center">+2 °C <br />+8 °C</p>
+            </div>
+            <div class="services_temp-box" id="temp-box-3">
+              <span class="temp-box_num">03</span>
+              <p class="align-center">+ 5 °C <br />+25 °C</p>
+            </div>
+            <div class="services_temp-box services_temp-box_blue" id="temp-box-4">
+              <span class="temp-box_num">04</span>
+              <p class="align-center">0 °C <br />-18 °C</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="service_mode">
+              <span class="mode-bg">01</span>
+              <h4 class="mode-without">«Без температурного режима»</h4>
+              <p>
+                К данной категории груза относятся любые грузы, не имеющие
+                специальных условий перевозки. Обувь, одежда, оборудование,
+                оргтехника, запчасти и т.д
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="service_mode">
+              <span class="mode-bg">02</span>
+              <h4 class="mode-cold">«Режим +2+8»</h4>
+              <p>
+                К данной категории относятся грузы, требующие строгого
+                соблюдения температурного режима при хранении и перевозки. К
+                таким товарам относятся продукты питания (молочная продукция,
+                колбасные изделия и т.д.).
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="service_mode">
+              <span class="mode-bg">03</span>
+              <h4 class="mode-warm">«Режим +5+25»</h4>
+              <p>
+                Данный режим используется для перевозки продуктов питания,
+                медикаментов, косметики, напитков и т.д.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="service_mode">
+              <span class="mode-bg">04</span>
+              <h4 class="mode-freeze">«Режим -18»</h4>
+              <p>
+                Данный режим используется для перевозки продуктов питания в
+                режиме «заморозка»
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts-section" id="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-6">
+            <div class="contacts-info">
+              <span class="shadow_contacts">Контакты</span>
+              <h3 class="h3 ml-xl-5 ml-md-5">Контакты</h3>
+
+              <div class="adress">
+                <i><img src="../img/contacts-loc.png" alt=""/></i>
+                <p>Москва, Амурская улица, дом 2, строение 1</p>
+              </div>
+              <div class="phones">
+                <i><img src="../img/phone-loc.png" alt=""/></i>
+                <div class="adress-num">
+                  <a href="tel:88002221813" class="">8 (800) 222-18-13</a>
+                  <a href="tel:84957443080" class="">8 (495) 744-30-80</a>
+                </div>
+              </div>
+              <div class="mail">
+                <i><img src="../img/mail-loc.png" alt=""/></i>
+                <a href="mailto:info@tk-road.ru">info@tk-road.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <div class="contacts_feedback-box">
+              <div class="contacts_feedback">
+                <h3 class="">
+                  Оставьте заявку <br />
+                  Вам перезвонят
+                </h3>
+                <form action="">
+                  <input type="name" placeholder="имя" />
+                  <input type="email" placeholder="email" />
+                  <input type="phone" placeholder="телефон" />
+                  <button type="submit" class="btn_submit">
+                    Оставить заявку
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="contacts_where">
+              <a
+                href="img/map-where.jpg"
+                data-fancybox="map"
+                data-caption="Наш адрес в Москве"
+              >
+                <img src="img/map-where.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row flex-wrap">
+          <div class="col-xl-10  offset-xl-1 ">
+            <div class="contacts_map-wrapper">
+              <div class="contacts_map-module">
+                <a
+                  href="img/ekb-big.jpg"
+                  data-fancybox="map"
+                  data-caption="Наш адрес в Екатеринбурге"
+                >
+                  <img src="img/ekb-big.jpg" alt="" />
+                </a>
+              </div>
+              <div class="contacts_map-module">
+                <a
+                  href="img/ulan-big.jpg"
+                  data-fancybox="map"
+                  data-caption="Наш адрес в Улан-Удэ"
+                >
+                  <img src="img/ulan-big.jpg" alt="" />
+                </a>
+              </div>
+              <div class="contacts_map-module">
+                <a
+                  href="img/nsk-big.jpg"
+                  data-fancybox="map"
+                  data-caption="Наш адрес в Новосибирске"
+                >
+                  <img src="img/nsk-big.jpg" alt="" />
+                </a>
+              </div>
+              <div class="contacts_map-module">
+                <a
+                  href="img/irk-big.jpg"
+                  data-fancybox="map"
+                  data-caption="Наш адрес в Иркутске"
+                >
+                  <img src="img/irk-big.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="docs" id="docs">
+      <div class="container">
+        <div class="row">
+          <span class="shadow_docs">Документы</span>
+          <h3 class="h3 ">Документы</h3>
+        </div>
+        <div class="row">
+          <div class="col-xl-10 offset-xl-1">
+            <div class="docs_box">
+              <div class="docs_el">
+                <img src="img/req.jpg" alt="" />
+                <a href="" download="requisites.doc">Реквизиты</a>
+              </div>
+              <div class="docs_el">
+                <img src="img/contract.jpg" alt="" />
+                <a href="" download="dogovor.doc">Бланк договора</a>
+              </div>
+              <div class="docs_el">
+                <img src="img/tariff.jpg" alt="" />
+                <a href="" download="tariff.xls">Тарифы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="calculator" id="calc">
+      <div class="container">
+        <div class="row">
+          <span class="shadow_docs lefter">Калькулятор</span>
+          <h3 class="h3 ">Калькулятор</h3>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-sm-10 mx-sm-auto">
+            <div class="calculator-box">
+              <h3 class="calculator-h3">
+                Расчет стоимости доставки
+              </h3>
+              <form action="">
+                <div class="loc">
+                  <div class="from">
+                    <span>Пункт отправления</span>
+                    <div class="select">
+                      <select name="" id="" class="select">
+                        <option value="">Москва</option>
+                        <option value="">Екатеринбург</option>
+                        <option value="">Новосибирск</option>
+                        <!--  v-for -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="in">
+                    <span>Пункт назначения</span>
+                    <div class="select">
+                      <select name="" id="" class="select">
+                        <option value="">Абакан</option>
+                        <option value="">Екатеринбург</option>
+                        <option value="">Новосибирск</option>
+                        <!--  v-for -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="expedition">
+                  <h3 class="expedition_title">
+                    Экспедиционные услуги
+                  </h3>
+                  <div class="expedition_wrap">
+                    <div class="from">
+                      <span>Пункт отправления</span>
+                      <input
+                        type="checkbox"
+                        class="from_checkbox"
+                        id="from_checkbox"
+                      />
+                      <span class="from_checkbox_mark"><img src="img/ok-calc-mark.png" alt=""></span>
+                    </div>
+                    <div class="in">
+                      <span>Пункт назначения</span>
+                      <input
+                        type="checkbox"
+                        class="from_checkbox"
+                        id="from_checkbox"
+                      />
+                      <span class="from_checkbox_mark"><img src="img/ok-calc-mark.png" alt=""></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bulk">
+                  <div class="weigt">
+                    <span>Вес груза,кг</span>
+                    <input type="number" placeholder="кг" />
+                  </div>
+                  <div class="volume">
+                    <span>Обьем груза,м3</span>
+                    <input type="number" placeholder="м3" />
+                  </div>
+                </div>
+                <div class="price">
+                  <div class="price__title">
+                    <span>Стоимость груза ,руб</span>
+                  </div>
+                  <div class="price__input">
+                    <input type="number" name="" id="" />
+                  </div>
+                </div>
+                <div class="another_mode">
+                  <div class="insurance">
+                    <div class="insurance__title">
+                      <span> Страховка(0,12%)</span>
+                    </div>
+                    <div class="insurance__checkbox">
+                      <input
+                        type="checkbox"
+                        class="insurance__checkbox_input"
+                      />
+                      <span
+                        class="from_checkbox_mark from_checkbox_mark_insurance"
+                        ><img src="img/ok-calc-mark.png" alt=""></span
+                      >
+                      <input
+                        type="number"
+                        class="insurance__num-input"
+                        placeholder="10 000"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="temp-value">
+                    <div class="temp-value__title">
+                      <span>Температурный режим</span>
+                      <div class="temp-mode_select">
+                        <select name="temp-mode" сlass="temp-mode" id="">
+                          <option value="">Без режима</option>
+                          <option value="">+2 - +8</option>
+                          <option value="">+5 - +25</option>
+                          <option value="">-18</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 ml-xl-4 col-sm-10 mx-sm-auto">
+            <div class="calculator-view">
+              <div class="calc-info">
+                <div class="loc-view">
+                  Москва - Абакан
+                </div>
+                <div class="price-view">Итого: <span>25 000 руб</span></div>
+                <div class="time-view">В пути <span>(дн.) 10 </span></div>
+                <div class="timestart-view">
+                  Отправка <span> (д/н CР,ПТ) </span>
+                </div>
+                <div class="transit-view">
+                  Транзит <span> Красноярск </span>
+                </div>
+              </div>
+              <div class="calc-pricing">
+                <div class="pricing-view">
+                  Доставка <span> 80158.00 руб.</span>
+                </div>
+                <div class="pricing-view">
+                  Страховка <span> 240.00 руб.</span>
+                </div>
+                <div class="pricing-view">
+                  t °С - режим <span> 40079.00 руб.</span>
+                </div>
+                <div class="pricing-view">
+                  экспедитор А <span> 0.00 руб.</span>
+                </div>
+                <div class="pricing-view">
+                  экспедитор B <span> 0.00 руб.</span>
+                </div>
+              </div>
+              <div class="total-view">Итог: <span> 120477.00 руб.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="news" id="news">
+        <div class="container">
+            <div class="row">
+                <span class="shadow_docs lefter">Новости</span>
+                <h3 class="h3 ">Новости</h3>
+            </div>
+        </div>
+        <div class="news-pop-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <span class="closePopUp">×</span>
+                        <div class="news-pop-up__title">
+                            ИЗМЕНИЛСЯ АДРЕС ВЫДАЧИ ГРУЗА В АНАПЕ
+                        </div>
+                        <div class="news-pop-up__content">
+                            <p>
+                                    С 23.10.2019 выгрузка контейнеров и передача грузов конечным получателям в г.Анапе 
+    осуществляется по новому адресу: г.Анапа, ул. Матвеевское шоссе, д.57.
+                                </p>
+                                <p>
+                                
+
+    Контактный телефон +8 (495) 744 - 30 - 80
+
+    </p>
+    <p> 
+    А также доводим до Вашего сведения, что с 01.11.2019 срок бесплатного хранения груза 
+    на складе в Анапе составляет одни сутки.
+    </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 offset-xl-1">
+            <div class="news__item">
+              <div class="news__content">
+                <span>09.09.2019</span>
+                <p>
+                  Компания «РегиОнАвтоДоставка» перевозка сборного груза Авто и
+                  Ж/Д транспортом.
+                </p>
+                <a href="" class="read_more">Читать больше >></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 offset-xl-1">
+            <div class="news__item">
+              <div class="news__content">
+                <span>09.09.2019</span>
+                <p>
+                  Компания «РегиОнАвтоДоставка» перевозка сборного груза Авто и
+                  Ж/Д транспортом.
+                </p>
+                <a href="" class="read_more">Читать больше >></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 offset-xl-1">
+            <div class="news__item">
+              <div class="news__content">
+                <span>09.09.2019</span>
+                <p>
+                  Компания «РегиОнАвтоДоставка» перевозка сборного груза Авто и
+                  Ж/Д транспортом.
+                </p>
+                <a href="" class="read_more">Читать больше >></a>
+              </div>
+            </div>
+          </div>
+          <div class="pl-5 col-xl-3">
+            <div class="ctrl-block">
+              <ul>
+                <li><img src="img/arr-left-news.png" alt=""></li>
+                <li>1</li>
+                <li class="ctrl-block_active">2</li>
+                <li>3</li>
+                <li><img src="img/arr-right-news.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3">
+            <div class="logo">
+              <img src="img/logo.png" alt="" />
+            </div>
+          </div>
+          <div class="col-xl-9 ">
+            <div class="footer__nav">
+              <nav class="menu" id="footer-menu">
+                <ul>
+                  <li>
+                    <a href="#header">Главная</a>
+                  </li>
+                  <li><a href="#services">Услуги</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                  <li><a href="#docs">Документы</a></li>
+                  <li><a href="#calc">Калькулятор</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-9 offset-xl-2">
+            <div class="footer__downline">
+              <nav class="future_nav">
+                <ul>
+                  <li><a href="" class="newsBtn" data-target="#news">Новости</a></li>
+                  <li><a href="">Личный кабинет</a></li>
+                </ul>
+              </nav>
+              <div class="contacts">
+                <div class="contacts__email">
+                  <a href="mailto:info@tk-road.ru" class="email">
+                    info@tk-road.ru
+                  </a>
+                </div>
+                <div class="contacts__phones">
+                  <a href="tel:88002221813" class="num1">8 (800) 222-18-13</a>
+                  <a href="tel:84957443080" class="num2">8 (495) 744-30-80</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <span class="rigths">
+            © 2019 Все права защищены
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
